@@ -15,7 +15,7 @@ Some example project ideas from previous classes:
 
 ## Requirements:
 
-1. Build out relationships with ActiveRecord. You should at minimum have three models, and ideally, five models. You do not have to have all of these built out on day one. But by the end of the week, you should have at least five models.
+1. Build out relationships with ActiveRecord. You should at minimum have three models, and ideally, five models. You do not have to have all of these built out on day one. But by the end of the week, you should have at least three models.
 
 2. Building methods inside of your models. There should be some methods in your models so that way you keep your controllers from getting out of controller with logic built inside of them. These are to be used to better extract data from your tables.
 
