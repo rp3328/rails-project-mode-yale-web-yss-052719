@@ -4,7 +4,8 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :username
       t.string :password_digest
 
-      t.string :name
+      t.string :full_name
+      t.string :email
       t.string :fav_type
       t.string :fav_stat
 
