@@ -5,21 +5,21 @@
   <% end %>
 <% end %>
 
-<h1>Sign up for PokeDex</h1>
+<h1>Sign Up for PokeDex</h1>
 <%= form_for @user do |f| %>
   <%= f.label :full_name %>
-  <%= f.text_field :full_name %>
+  <%= f.text_field :full_name %> <br>
   <%= f.label :username %>
-  <%= f.text_field :username %>
+  <%= f.text_field :username %><br>
   <%= f.label :email %>
-  <%= f.email_field :email %>
+  <%= f.email_field :email %><br>
   <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password %><br>
   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br>
 <%= f.label :fav_type %>
-<%= f.text_field :fav_type %>
+<%= f.text_field :fav_type %><br>
 <%= f.label :fav_stat %>
-<%= f.text_field :fav_stat %>
+<%= f.text_field :fav_stat %><br>
 <%= f.submit %>
 <% end %>
