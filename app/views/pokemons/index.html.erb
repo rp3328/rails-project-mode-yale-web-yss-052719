@@ -3,5 +3,6 @@
 <ul>
 <% @pokemons.each do |poke| %>
     <li><%= poke.name %> </li>
+    <%= image_tag(poke.name.downcase) %>
 <% end%>
 </ul>
