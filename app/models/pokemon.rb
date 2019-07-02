@@ -5,5 +5,17 @@ class Pokemon < ApplicationRecord
     has_many :users, through: :likes
     has_many :saved_users, through: :saves, source: :users
 
-    
+    def self.types
+        arr = []
+        self.all.each do |pokemon|
+            arr << pokemon.type1
+            arr << pokemon.type2
+        end 
+        arr.uniq.reject { |e| e.to_s.empty? } 
+    end
+
+    def stats
+        @arr = ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]
+    end
+
 end

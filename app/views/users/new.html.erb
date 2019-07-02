@@ -1,4 +1,4 @@
-
+<% @arr = ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]%>
 <% if flash[:error] %>
   <% flash[:error].each do |err| %>
     <li><%=  err %></li>
@@ -18,8 +18,21 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %><br>
 <%= f.label :fav_type %>
-<%= f.text_field :fav_type %><br>
+<select id='user_fav_type' name='fav_type'>
+    <% Pokemon.types.each do |type|%>
+        <option value="<%=type%>"> <%= type %> </option>
+    <% end%>
+</select>
+<br>
+
 <%= f.label :fav_stat %>
-<%= f.text_field :fav_stat %><br>
+<select id='user_fav_stat' name='fav_stat'>
+    <% @arr.each do |stat|%>
+        <option value="<%=stat%>"> <%= stat %> </option>
+    <% end%>
+</select>
+
+
+<%# f.collection_select(:pokemon_ids, @pokemons, :id, :name) %><br>
 <%= f.submit %>
 <% end %>
