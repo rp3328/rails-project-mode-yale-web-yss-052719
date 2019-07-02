@@ -1,2 +1,7 @@
-<%= @pokemons.name %>
+<h1>General Feed</h1>
 
+<ul>
+<% @pokemons.each do |poke| %>
+    <li><%= poke.name %> </li>
+<% end%>
+</ul>
