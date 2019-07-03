@@ -12,5 +12,5 @@ class PokemonsController < ApplicationController
     def pokemon_params(*args)
         params.require(:pokemon).permit(*args)
     end
-    
+
 end
