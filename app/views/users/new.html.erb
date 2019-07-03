@@ -18,23 +18,9 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %><br>
 <%= f.label :fav_type %>
-<%= f.collection_select :fav_type, @types, :name, :name %>
-<select id='user_fav_type' name='fav_type'>
-    <% Pokemon.types.each do |type|%>
-        <option value="<%=type%>"> <%= type %> </option>
-    <% end%>
-</select>
-<br>
-
+<%= f.collection_select :fav_type, @types, :name, :name %> <br>
 <%= f.label :fav_stat %>
-<select id='user_fav_stat' name='fav_stat'>
-    <% @stat_list.each do |stat|%>
-        <option value="<%= stat %>"> <%= stat %> </option>
-    <% end%>
-</select>
-
-
-<%# f.collection_select(:pokemon_ids, @pokemons, :id, :name) %><br>
+<%= f.collection_select :fav_stat, @stat_list, :to_s, :to_s %><br>
 <%= f.submit %>
 <% end %>
 
