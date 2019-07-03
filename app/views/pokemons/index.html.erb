@@ -2,7 +2,7 @@
 <h1>General Feed</h1>
 
 <ul>
-<% @pokemons.shuffle.each do |poke| %>
+<% @pokemons.each do |poke| %>
     <li><%= poke.name %> </li>
 
     <%= link_to image_tag(poke.img_path), pokemon_path(poke) %>

@@ -8,6 +8,10 @@
 
 require 'csv'
 
+Pokemon.destroy_all
+Type.destroy_all
+PokemonType.destroy_all
+
 path = File.join(File.dirname(__FILE__), "pokemon.csv")
 pokemons = CSV.read(path, headers: true)
 
