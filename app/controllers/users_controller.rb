@@ -6,12 +6,13 @@ class UsersController < ApplicationController
     def new
       @user = User.new
       @pokemons = Pokemon.all
-    
+      @types = Type.all
     end
   
     def create
       @user = User.create(user_params)
       @pokemons = Pokemon.all
+      @types = Type.all
       if @user.valid?
         session[:user_id] = @user.id # Logs me in after signing up
         redirect_to user_path(@user)

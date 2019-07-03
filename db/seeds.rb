@@ -20,3 +20,31 @@ pokemons.each do |p|
     pokemon.save
 end
 
+Type.create(name: "grass")
+Type.create(name: "poison")
+Type.create(name: "fire")
+Type.create(name: "flying")
+Type.create(name: "water")
+Type.create(name: "bug")
+Type.create(name: "normal")
+Type.create(name: "dark")
+Type.create(name: "electric")
+Type.create(name: "ground")
+Type.create(name: "ice")
+Type.create(name: "fairy")
+Type.create(name: "fighting")
+Type.create(name: "psychic")
+Type.create(name: "rock")
+Type.create(name: "steel")
+Type.create(name: "ghost")
+Type.create(name: "dragon")
+
+Pokemon.all.each do |poke|
+    Type.all.each do |type|
+        if type.name == poke.type1
+            PokemonType.create(pokemon_id: poke.id, type_id: type.id)
+        elsif type.name == poke.type2
+            PokemonType.create(pokemon_id: poke.id, type_id: type.id)
+        end
+    end
+end

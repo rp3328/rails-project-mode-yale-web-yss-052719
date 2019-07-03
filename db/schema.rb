@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_02_150201) do
+ActiveRecord::Schema.define(version: 2019_07_03_144251) do
 
   create_table "likes", force: :cascade do |t|
     t.boolean "vote"
     t.integer "user_id"
     t.integer "pokemon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pokemon_types", force: :cascade do |t|
+    t.integer "pokemon_id"
+    t.integer "type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -50,6 +57,12 @@ ActiveRecord::Schema.define(version: 2019_07_02_150201) do
     t.boolean "vote"
     t.integer "user_id"
     t.integer "pokemon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

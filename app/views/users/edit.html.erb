@@ -18,6 +18,8 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %><br>
 <%= f.label :fav_type %>
+<%= f.collection_select :fav_type, @types, :name, :name %>
+
 <select id='fav_type' name='fav_type'>
     <% Pokemon.types.each do |type|%>
         <option value="type"> <%= type %> </option>
