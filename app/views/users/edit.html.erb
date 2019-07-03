@@ -5,7 +5,7 @@
   <% end %>
 <% end %>
 
-<h1>Sign Up for PokeDex</h1>
+<h1>Edit user</h1>
 <%= form_for @user do |f| %>
   <%= f.label :full_name %>
   <%= f.text_field :full_name %> <br>
@@ -18,9 +18,9 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %><br>
 <%= f.label :fav_type %>
-<select id='user_fav_type' name='fav_type'>
+<select id='fav_type' name='fav_type'>
     <% Pokemon.types.each do |type|%>
-        <option value="<%=type%>"> <%= type %> </option>
+        <option value="type"> <%= type %> </option>
     <% end%>
 </select>
 <br>
@@ -37,8 +37,5 @@
 <%= f.submit %>
 <% end %>
 
-<% if logged_in?%>
-    <%= link_to "Logout", sessions_path, method: :delete %>
-<% else%>
-    <%= link_to "Login", login_path%>
- <% end%>
+<hr>
+<%= link_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %> 

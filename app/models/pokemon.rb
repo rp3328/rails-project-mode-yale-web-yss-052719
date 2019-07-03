@@ -14,13 +14,13 @@ class Pokemon < ApplicationRecord
         arr.uniq.reject { |e| e.to_s.empty? } 
     end
 
-    def stats
-        @stats = ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]
-    end
+    # def stats
+    #     @stat_list = ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]
+    # end
 
-    def img_name 
-        @imgs = []
-        Dir.new('.').each {|file| @imgs << file }
-    end
+    # def img_name 
+    #     @imgs = []
+    #     Dir.new('.').each {|file| @imgs << file }
+    # end
 
 end
