@@ -27,7 +27,7 @@
 
 <%= f.label :fav_stat %>
 <select id='user_fav_stat' name='fav_stat'>
-    <% @arr.each do |stat|%>
+    <% @stats.each do |stat|%>
         <option value="<%=stat%>"> <%= stat %> </option>
     <% end%>
 </select>

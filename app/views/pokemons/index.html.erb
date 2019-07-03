@@ -1,8 +1,10 @@
 <h1>General Feed</h1>
 
 <ul>
-<% @pokemons.each do |poke| %>
+<% @pokemons.shuffle.each do |poke| %>
     <li><%= poke.name %> </li>
-    <%= image_tag(poke.name.downcase) %>
+    <%#if @imgs.include?(poke.name.downcase) %>
+        <%= image_tag(poke.name.downcase) %>
+    <%# end%>
 <% end%>
 </ul>

@@ -15,7 +15,12 @@ class Pokemon < ApplicationRecord
     end
 
     def stats
-        @arr = ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]
+        @stats = ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]
+    end
+
+    def img_name 
+        @imgs = []
+        Dir.new('.').each {|file| @imgs << file }
     end
 
 end
