@@ -41,9 +41,11 @@ class UsersController < ApplicationController
   def update
       @user = User.find(params[:id])
       @types = Type.all
+      byebug
       if @user.update(user_params)
         redirect_to user_path(@user)
       else
+        
         render :edit
       end
   end
