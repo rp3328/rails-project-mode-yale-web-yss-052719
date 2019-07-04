@@ -1,4 +1,5 @@
-<div class="body">
+
+<%= link_to 'Hunting Grounds', pokemons_path %><br>
 <%# image_tag('background1.jpg', style: "height: 30px; width: 30px") %>
 <%= link_to image_tag(@pokemon.img_path), pokemon_path(@pokemon) %>
 
@@ -31,7 +32,6 @@
 <p>Speed: <%= @pokemon.speed %> </p>
 <br>
 
-<%= link_to 'PokeIndex', pokemons_path %>
 
 <div style="display: flex; flex-flow: row wrap;">
     <%= button_to like_pokemon_path(@pokemon), method: :patch, class: "button button-like #{@user.pokemons.include?(@pokemon) ? "liked" : ""}"   do %>
@@ -43,3 +43,5 @@
         <span>Recruit</span>
     <% end %>
 </div>
+<br>
+<%= link_to "Back to Profile", user_path(@user) %>

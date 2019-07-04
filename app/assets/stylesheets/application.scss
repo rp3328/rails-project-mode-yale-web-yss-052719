@@ -19,7 +19,7 @@
 $border-radius-size: 14px;
 
 .body {
-  background-image: image-url('background1.jpg'), 
+  background-image: 
   image-url('background2.jpg'),
   image-url('background3.jpg');
 	// background-position:center top, right top, center bottom;
@@ -35,7 +35,7 @@ $border-radius-size: 14px;
   // border-style: solid;
   font-family: Impact, Haettenschweiler, 'Arial Bold', sans-serif;
   font-size: 40px;
-  color: green;
+  color: black;
 }
 
 
