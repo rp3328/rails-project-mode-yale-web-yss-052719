@@ -1,5 +1,7 @@
 class PokemonsController < ApplicationController
 
+    before_action :authorized
+    
     def index
         @pokemons = Pokemon.customize(Pokemon.all, current_user.weight_gen)
         @user = current_user
