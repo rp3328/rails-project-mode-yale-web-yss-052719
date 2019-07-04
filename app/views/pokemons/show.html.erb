@@ -28,3 +28,15 @@
 <br>
 
 <%= link_to 'PokeIndex', pokemons_path %>
+
+<div style="display: flex; flex-flow: row wrap;">
+    <%= button_to like_pokemon_path(@pokemon), method: :patch, class: "button button-like #{@user.pokemons.include?(@pokemon) ? "liked" : ""}"   do %>
+        <i class="fa fa-heart"></i>
+        <span>Like</span>
+    <% end %>
+    <%= button_to recruit_pokemon_path(@pokemon), method: :patch, class: "button button-recruit #{@user.recruited_pokemons.include?(@pokemon) ? "recruited" : ""}"  do %>
+        <i class="fa fa-heart"></i>
+        <span>Recruit</span>
+    <% end %>
+</div>
+
