@@ -24,8 +24,12 @@ class UsersController < ApplicationController
     end
   
     def show
-
       @user = User.find(params[:id])
+    end
+
+    def poketeam
+      @user = User.find(params[:id])
+      @poketeam = Pokemon.all[0,5] # @user.recruited_pokemons
     end
 
 
@@ -44,7 +48,17 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to "/login"
   end
-  
+
+  def like
+    @user = User.find(params[:user_id])
+    @pokemon = User.find(params[:pokemon_id])
+
+  end
+
+  def recruit
+    @user = User.find(params[:user_id])
+    @pokemon = User.find(params[:pokemon_id])
+  end
 
 
     private

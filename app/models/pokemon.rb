@@ -1,18 +1,19 @@
 class Pokemon < ApplicationRecord
     has_many :likes
-    has_many :saves
+    has_many :recruits
 
     has_many :users, through: :likes
-    has_many :saved_users, through: :saves, source: :users
+    has_many :trainers, through: :recruits, source: :users
+    # has_many :saved_users, through: :recruits, source: :users
 
-    def self.types
-        arr = []
-        self.all.each do |pokemon|
-            arr << pokemon.type1
-            arr << pokemon.type2
-        end 
-        arr.uniq.reject { |e| e.to_s.empty? } 
-    end
+    # def self.types
+    #     arr = []
+    #     self.all.each do |pokemon|
+    #         arr << pokemon.type1
+    #         arr << pokemon.type2
+    #     end 
+    #     arr.uniq.reject { |e| e.to_s.empty? } 
+    # end
 
     # def stats
     #     @stat_list = ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]

@@ -1,9 +1,6 @@
-class CreateSaves < ActiveRecord::Migration[5.2]
+class CreateRecruits < ActiveRecord::Migration[5.2]
   def change
-    create_table :saves do |t|
-
-
-      t.boolean :vote
+    create_table :recruits do |t|
       t.integer :user_id
       t.integer :pokemon_id
       
