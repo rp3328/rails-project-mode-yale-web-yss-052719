@@ -1,7 +1,7 @@
 class PokemonsController < ApplicationController
 
     def index
-        @pokemons = Pokemon.all
+        @pokemons = Pokemon.customize(Pokemon.all, current_user.weight_gen)
 
     end
 

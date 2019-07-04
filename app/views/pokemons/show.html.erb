@@ -1,0 +1,30 @@
+<h2> Name: <%= @pokemon.name %></h2>
+<h2> 名: <%= @pokemon.japanese_name %></h2>
+<hr>
+<h3> Basic Info </h3>
+<hr>
+<p> Type1: <%= @pokemon.type1 %></p>
+<p> Type2: <%= @pokemon.type2 %></p>
+<p>Pokedex Number: <%= @pokemon.pokedex_number %> </p>
+<p> Male Percentage: <%= @pokemon.percentage_male %>%</p>
+<p>Classification: <%= @pokemon.classification %> </p>
+<p>Height: <%= @pokemon.height_m %> </p>
+<p>Weight: <%= @pokemon.weight_kg %> </p>
+<p>Capture Rate: <%= @pokemon.capture_rate %> </p>
+<p>Base Egg Steps: <%= @pokemon.base_egg_steps %> </p>
+<p>EXP Growth: <%= @pokemon.experience_growth %> </p>
+<p>Base Happiness: <%= @pokemon.base_happiness %> </p>
+<p>Generation: <%= @pokemon.generation %> </p>
+<p>Legendary: <%= @pokemon.is_legendary %> </p>
+<hr>
+<h3> Statistics </h3>
+<hr>
+<p>HP: <%= @pokemon.hp %> </p>
+<p>Attack: <%= @pokemon.attack %> </p>
+<p>Defense: <%= @pokemon.defense %> </p>
+<p>SP Attack: <%= @pokemon.sp_attack %> </p>
+<p>SP Defense: <%= @pokemon.sp_defense %> </p>
+<p>Speed: <%= @pokemon.speed %> </p>
+<br>
+
+<%= link_to 'PokeIndex', pokemons_path %>

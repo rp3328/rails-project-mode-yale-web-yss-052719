@@ -4,25 +4,23 @@ class Pokemon < ApplicationRecord
 
     has_many :users, through: :likes
     has_many :trainers, through: :recruits, source: :users
-    # has_many :saved_users, through: :recruits, source: :users
 
-    # def self.types
-    #     arr = []
-    #     self.all.each do |pokemon|
-    #         arr << pokemon.type1
-    #         arr << pokemon.type2
-    #     end 
-    #     arr.uniq.reject { |e| e.to_s.empty? } 
-    # end
 
-    # def stats
-    #     @stat_list = ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]
-    # end
+    
 
-    # def img_name 
-    #     @imgs = []
-    #     Dir.new('.').each {|file| @imgs << file }
-    # end
+    def self.customize(pokemons, weight_arr)
+        arr = []
+        while !pokemons.empty?
+            pokemon = pokemons.sample
+            type_sample = weight_arr.sample
+            if type_sample == pokemon.type1 || type_sample == pokemon.type2
+                    arr << pokemon
+                    pokemons = pokemons.select { |poke| poke.id != pokemon.id }
+            end
+        end
+
+        return arr
+    end
 
     def img_path
         g = {
