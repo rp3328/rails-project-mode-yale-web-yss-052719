@@ -8,10 +8,11 @@ class User < ApplicationRecord
 
     has_secure_password validations: false
     validates :full_name, :username, :email, presence: true
+    validates :full_name, :username, :email, uniqueness: true
 
     validates :password, presence: {message: 'You must enter a password'},
-                       length: {minimum: 16,
-                       message: 'Your password must contain at least 16 characters'}
+                       length: {minimum: 4,
+                       message: 'Your password must contain at least 4 characters'}
     validates_confirmation_of :password, allow_blank: true
 
 
