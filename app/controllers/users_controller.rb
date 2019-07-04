@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
     def poketeam
       @user = User.find(params[:id])
-      @poketeam = Pokemon.all[0,5] # @user.recruited_pokemons
+      @poketeam = @user.recruited_pokemons
     end
 
 
@@ -40,6 +40,7 @@ class UsersController < ApplicationController
 
   def update
       @user = User.find(params[:id])
+      @types = Type.all
       if @user.update(user_params)
         redirect_to user_path(@user)
       else

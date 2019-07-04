@@ -22,10 +22,10 @@ class User < ApplicationRecord
         Pokemon.all.each do |pokemon|
             if pokemon.likes != []
                 if pokemon.type2 == nil
-                    feed[pokemon.type1] += 2
+                    feed[pokemon.type1] += 10
                 else
-                    feed[pokemon.type1] += 2
-                    feed[pokemon.type2] += 2
+                    feed[pokemon.type1] += 10
+                    feed[pokemon.type2] += 10
                 end
             end
         end
