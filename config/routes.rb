@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   
   get "/users/:id/poketeam", to: "users#poketeam"
-  patch "/like", to: "users#like"
-  patch "/recruit", to: "users#recruit"
+  patch "/pokemons/:id/like", to: "pokemons#like", as: "like_pokemon"
+  patch "/pokemons/:id/recruit", to: "pokemons#recruit", as: "recruit_pokemon"
 
 
   

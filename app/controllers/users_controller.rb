@@ -53,16 +53,7 @@ class UsersController < ApplicationController
     redirect_to "/login"
   end
 
-  def like
-    @user = User.find(params[:user_id])
-    @pokemon = User.find(params[:pokemon_id])
-
-  end
-
-  def recruit
-    @user = User.find(params[:user_id])
-    @pokemon = User.find(params[:pokemon_id])
-  end
+  
 
 
     private

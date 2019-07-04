@@ -5,9 +5,6 @@ class Pokemon < ApplicationRecord
     has_many :users, through: :likes
     has_many :trainers, through: :recruits, source: :users
 
-
-    
-
     def self.customize(pokemons, weight_arr)
         arr = []
         while !pokemons.empty?
