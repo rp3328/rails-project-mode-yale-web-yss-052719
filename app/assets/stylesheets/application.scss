@@ -18,6 +18,27 @@
 
 $border-radius-size: 14px;
 
+.body {
+  background-image: url('background1.jpg'), 
+  url('background2.jpg'),
+  url('background3.jpg');
+	// background-position:center top, right top, center bottom;
+	// background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+.title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  // border-style: solid;
+  font-family: Impact, Haettenschweiler, 'Arial Bold', sans-serif;
+  font-size: 40px;
+  color: green;
+}
+
+
 .container {
   display: flex;
   flex-flow: row wrap;
@@ -91,6 +112,7 @@ $border-radius-size: 14px;
     //   float: left;
     //   padding: 20px 15px;
     // }
+
 
     .stat {
       position: relative;

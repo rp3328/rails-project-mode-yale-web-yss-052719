@@ -1,3 +1,7 @@
+<div class="body">
+<%# image_tag('background1.jpg', style: "height: 30px; width: 30px") %>
+<%= link_to image_tag(@pokemon.img_path), pokemon_path(@pokemon) %>
+
 <h2> Name: <%= @pokemon.name %></h2>
 <h2> 名: <%= @pokemon.japanese_name %></h2>
 <hr>
@@ -28,3 +32,5 @@
 <br>
 
 <%= link_to 'PokeIndex', pokemons_path %>
+
+</div>

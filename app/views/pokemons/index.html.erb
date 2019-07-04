@@ -1,13 +1,61 @@
+<div class="body">
 
-<h1>General Feed</h1>
+<%= link_to "Profile", user_path(@user) %>
 
-<ul>
-<% @pokemons.each do |poke| %>
-    <li><%= poke.name %> </li>
+<div class = "title">
+<h1>Zone 10</h1>
+</div>
 
-    <%= link_to image_tag(poke.img_path), pokemon_path(poke) %>
+<div class="container">
+    <% @pokemons.each do |pokemon| %>
+        
+        <div class="poke-card">
+            <%= link_to(pokemon_path(pokemon)) do %>
+            <div class="image">
+                <%= image_tag pokemon.img_path %>
+            </div>
+            <% end %>
+            <div class="name">
+                <%= pokemon.name %>
+            </div>
+            <div class="jap-name">
+                <%= pokemon.japanese_name %>
+            </div>
+            <div class="types">
+                <div class="type">
+                    <%= pokemon.type1.upcase %>
+                </div>
+                <% if pokemon.type2 %>
+                    <div class="type">
+                        <%= pokemon.type2.upcase %>
+                    </div>
+                <% end %>
+            </div>
+            <div class="stats">
+                <div>
+                    <div class="stat"><%= pokemon.attack %></div>
+                    <div class="stat-value">Attack</div>
+                </div>
+                <div>
+                    <div class="stat"><%= pokemon.defense %></div>
+                    <div class="stat-value">Defense</div>
+                </div>
+                <div>
+                    <div class="stat"><%= pokemon.sp_attack %></div>
+                    <div class="stat-value">Sp_Att</div>
+                </div>
+                <div>
+                    <div class="stat"><%= pokemon.sp_defense %></div>
+                    <div class="stat-value">Sp_Def</div>
+                </div>
+                <div>
+                    <div class="stat"><%= pokemon.speed %></div>
+                    <div class="stat-value">Speed</div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
 
-<% end%>
-</ul>
 
-
+</div>
