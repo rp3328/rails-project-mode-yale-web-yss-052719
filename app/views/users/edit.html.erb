@@ -22,6 +22,6 @@
 <% end %>
 
 <hr>
-<%= link_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %> <br>
+<%= button_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %> 
 
-<%= link_to "Profile", :back %>
+<%= link_to "Profile",  user_path(@user)%>
