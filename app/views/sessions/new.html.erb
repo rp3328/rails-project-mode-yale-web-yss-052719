@@ -1,10 +1,26 @@
+<div class = "body">
+
+<div class="title">
 <h1> Login</h1>
+</div>
+
+<% if flash.now[:error] %>
+  <% flash.now[:error].each do |f| %>
+    <li><%= f %></li>
+  <% end %>
+<% end %>
+
+
 <%= form_tag "/sessions" do %>
-  <%= label_tag :email %>
+ <b> <%= label_tag :email %>: </b>
   <%= email_field_tag :email %> <br>
-  <%= label_tag :password %>
+  <b> <%= label_tag :password %>:  </b>
   <%= password_field_tag :password %><br>
   <%= submit_tag "Log in" %>
 <% end %>
 
+</div>
 <%= link_to "Join?", signup_path, method: :get %>
+
+
+

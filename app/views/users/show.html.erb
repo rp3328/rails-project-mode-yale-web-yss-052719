@@ -5,6 +5,8 @@
 <h3> Favorite Stat: <%= @user.fav_stat %> </h3>
 
 <div>
+<%= link_to "Catch'em all", pokemons_path %>
+<div>
 <%= link_to 'Edit User',  "/users/#{@user.id}/edit"%>
 </div>
 <div>

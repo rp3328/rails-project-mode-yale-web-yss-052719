@@ -2,11 +2,12 @@ class PokemonsController < ApplicationController
 
     before_action :set_pokemon, except: [:index]
     before_action :set_user
+    before_action :authorized
 
     def index
         @pokemons = Pokemon.customize(Pokemon.all, current_user.weight_gen)
     end
-
+    
     def show
     end
 
