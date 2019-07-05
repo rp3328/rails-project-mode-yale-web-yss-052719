@@ -6,7 +6,14 @@ class User < ApplicationRecord
     has_many :pokemons, through: :likes
     has_many :recruited_pokemons, through: :recruits, source: :pokemon
 
-    has_secure_password
+    has_secure_password validations: false
+    validates :full_name, :username, :email, presence: true
+    validates :full_name, :username, :email, uniqueness: true
+
+    validates :password, presence: {message: 'You must enter a password'},
+                       length: {minimum: 4,
+                       message: 'Your password must contain at least 4 characters'}
+    validates_confirmation_of :password, allow_blank: true
 
 
     def weight_gen
@@ -16,10 +23,10 @@ class User < ApplicationRecord
         Pokemon.all.each do |pokemon|
             if pokemon.likes != []
                 if pokemon.type2 == nil
-                    feed[pokemon.type1] += 2
+                    feed[pokemon.type1] += 10
                 else
-                    feed[pokemon.type1] += 2
-                    feed[pokemon.type2] += 2
+                    feed[pokemon.type1] += 10
+                    feed[pokemon.type2] += 10
                 end
             end
         end

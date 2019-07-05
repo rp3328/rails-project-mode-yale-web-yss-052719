@@ -4,11 +4,6 @@
 <h1> Login</h1>
 </div>
 
-<% if flash.now[:error] %>
-  <% flash.now[:error].each do |f| %>
-    <li><%= f %></li>
-  <% end %>
-<% end %>
 
 
 <%= form_tag "/sessions" do %>
@@ -22,5 +17,5 @@
 </div>
 <%= link_to "Join?", signup_path, method: :get %>
 
-
+</div>
 
