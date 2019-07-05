@@ -9,7 +9,7 @@
 <div class="container">
     <% @pokemons.each do |pokemon| %>
         
-        <div class="poke-card">
+        <div class="poke-card" style="background-color: <%= pokemon.card_color %>;">
             <%= link_to(pokemon_path(pokemon)) do %>
             <div class="image">
                 <%= image_tag asset_path(pokemon.img_path) %>

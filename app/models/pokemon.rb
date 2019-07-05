@@ -61,5 +61,30 @@ class Pokemon < ApplicationRecord
         end
     end
 
+    def card_color
+        color = {
+            "grass" => "green",
+            "poison" => "purple",
+            "fire" => "red",
+            "flying" => "lightblue",
+            "water" => "blue",
+            "bug" => "darkgreen",
+            "normal" => "silver",
+            "dark" => "grey",
+            "electric" => "yellow",
+            "ground" => "brown",
+            "ice" => "skyblue",
+            "fairy" => "pink",
+            "fighting" => "orange",
+            "psychic" => "purple",
+            "rock" => "brown",
+            "steel" => "silver",
+            "ghost" => "white",
+            "dragon" => "purple"
+        }
+
+        color[self.type1]
+    end
+
     
 end

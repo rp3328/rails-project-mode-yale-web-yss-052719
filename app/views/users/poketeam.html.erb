@@ -1,13 +1,14 @@
 
-<%= link_to "Back", :back %>
 
-<div class ="body">
+<div class="body">
+    <div class="button">
+    <%= button_to "Back to Profile", user_path(@user) %>
+    </div>
+    <div class="title">
+        <h1> Dream Team</h1>
+    </div> 
 
-<div class="title">
-    <h1> Dream Team</h1>
-</div> 
-
-<div class="container">
+    <div class="container">
 
     <% @poketeam.each do |pokemon| %>
         
