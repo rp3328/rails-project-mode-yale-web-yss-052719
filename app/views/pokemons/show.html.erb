@@ -1,5 +1,6 @@
 
 <%= link_to 'Hunting Grounds', pokemons_path %><br>
+<%= link_to 'PokeDex', "/users/#{@user.id}/poketeam" %><br>
 <%# image_tag('background1.jpg', style: "height: 30px; width: 30px") %>
 <%= link_to image_tag(@pokemon.img_path), pokemon_path(@pokemon) %>
 
