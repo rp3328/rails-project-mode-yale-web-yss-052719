@@ -20,6 +20,14 @@ class User < ApplicationRecord
         
         types = ["grass", "poison", "fire", "flying", "water", "bug", "normal", "dark", "electric", "ground", "ice", "fairy", "fighting", "psychic", "rock", "steel", "ghost", "dragon"]
         feed = Hash[types.map {|a| [a, 1]}]
+        
+        feed.each do |key, val|
+            if key == self.fav_type
+                feed[key] += 20
+      
+            end
+        end
+   
         Pokemon.all.each do |pokemon|
             if pokemon.likes != []
                 if pokemon.type2 == nil

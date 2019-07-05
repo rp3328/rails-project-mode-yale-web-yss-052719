@@ -4,18 +4,23 @@
 <h1> PokeBool!</h1>
 </div>
 
-
-
+<center>
 <%= form_tag "/sessions" do %>
  <b> <%= label_tag :email %>: </b>
-  <%= email_field_tag :email %> <br>
+  <%= email_field_tag :email %> <br> 
+
+
+
   <b> <%= label_tag :password %>:  </b>
-  <%= password_field_tag :password %><br>
+  <%= password_field_tag :password %><br> 
+
+
+
   <%= submit_tag "Log in" %>
 <% end %>
-
+ 
 
 <%= button_to "Create Account", signup_path, method: :get %>
-
+</center>
 </div>
 
