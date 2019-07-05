@@ -18,6 +18,51 @@
 
 $border-radius-size: 14px;
 
+.box {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  border-style: solid;
+}
+
+.profile-card {
+
+  background: white;
+  // width: 350px;
+  // display: inline-block;
+  margin: 2px;
+  border-radius: $border-radius-size + 5;
+  position: relative;
+  text-align: center;
+  // box-shadow: -1px 15px 30px -12px black;
+  // z-index: 9999;
+  border-style: solid;
+
+  .image {
+    border-bottom: 1px solid #021a40;
+    margin-bottom: 10px;
+    img {
+      position: relative;
+      // clip-path: inset(30px 10px 30px);
+      height: 150px;
+      
+      // margin-bottom: 35px;
+      // border-top-left-radius: $border-radius-size;
+      // border-top-right-radius: $border-radius-size;
+      // clip-path: margin-box;
+
+    }
+  }
+
+  .name {
+    font-size: 26px;
+    color: black;
+    font-weight: 900;
+    margin-bottom: 5px;
+  }
+
+}
+
 .container {
   display: flex;
   flex-flow: row wrap;

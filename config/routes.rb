@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :update, :edit, :show, :destroy]
   resources :pokemons, only: [:index, :show]
 
+  get "/", to: "static#home"
+
   get "/signup", to: "users#new"
   get "/login", to: "sessions#new"
   post "/sessions", to: "sessions#create"

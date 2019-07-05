@@ -24,8 +24,4 @@
 <%= f.submit %>
 <% end %>
 
-<% if logged_in?%>
-    <%= link_to "Logout", sessions_path, method: :delete %>
-<% else%>
-    <%= link_to "Login", login_path%>
- <% end%>
+<%= link_to "Login?", sessions_path %>
