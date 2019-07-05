@@ -24,6 +24,21 @@ $border-radius-size: 14px;
   justify-content: center;
   border-style: solid;
 }
+.another-box {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  
+  input {
+    margin: auto;
+  }
+
+  div {
+    margin: 10px;
+  }
+
+}
 
 .profile-card {
 
@@ -73,6 +88,14 @@ $border-radius-size: 14px;
   font-family: Impact, Haettenschweiler, 'Arial Bold', sans-serif;
   font-size: 40px;
   color: black;
+}
+
+label {
+  font-family: Impact, Haettenschweiler, 'Arial Bold', sans-serif;
+}
+
+input {
+  font-family: Impact, Haettenschweiler, 'Arial Bold', sans-serif;
 }
 
 

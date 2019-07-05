@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :pokemons, only: [:index, :show]
 
 
-  get "/", to: "static#home"
 
 
   get "/signup", to: "users#new"
