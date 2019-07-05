@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    before_action :authorized, only: [:show]
+    before_action :authorized, only: [:show, :edit]
 
 
     def new

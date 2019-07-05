@@ -13,7 +13,6 @@
   <%= f.text_field :username %><br>
   <%= f.label :email %>
   <%= f.email_field :email %><br>
-  
   <%= f.label :fav_type %>
   <%= f.collection_select :fav_type, @types, :name, :name %> <br>
   <%= f.label :fav_stat %>
@@ -24,4 +23,4 @@
 <hr>
 <%= button_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %> 
 
-<%= link_to "Profile",  user_path(@user)%>
+<%= button_to "Profile",  user_path(@user), method: :get%>
