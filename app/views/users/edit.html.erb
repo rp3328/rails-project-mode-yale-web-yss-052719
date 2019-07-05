@@ -17,6 +17,11 @@
   <%= f.collection_select :fav_type, @types, :name, :name %> <br>
   <%= f.label :fav_stat %>
   <%= f.collection_select :fav_stat, @stat_list, :to_s, :to_s %><br>
+  <p> Please enter a password to confirm your changes</p>
+  <%= f.label :password %>
+  <%= f.password_field :password %><br>
+  <%= f.label :password_digest %>
+  <%= f.password_field :password_digest %><br>
   <%= f.submit %>
 <% end %>
 

@@ -13,7 +13,7 @@
 
     <% @poketeam.each do |pokemon| %>
         
-        <div class="poke-card">
+        <div class="poke-card" style="background-color: <%= pokemon.card_color %>;">
             <%= link_to(pokemon_path(pokemon)) do %>
             <div class="image">
                 <%= image_tag pokemon.img_path %>
