@@ -13,10 +13,7 @@
   <%= f.text_field :username %><br>
   <%= f.label :email %>
   <%= f.email_field :email %><br>
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %><br>
+  
   <%= f.label :fav_type %>
   <%= f.collection_select :fav_type, @types, :name, :name %> <br>
   <%= f.label :fav_stat %>
@@ -25,6 +22,6 @@
 <% end %>
 
 <hr>
-<%= link_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %> 
+<%= button_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %> 
 
-<%= link_to "Back", :back %>
+<%= link_to "Profile",  user_path(@user)%>

@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   
+  root "sessions#new"
+
   get "/users/:id/poketeam", to: "users#poketeam"
   patch "/pokemons/:id/like", to: "pokemons#like", as: "like_pokemon"
   patch "/pokemons/:id/recruit", to: "pokemons#recruit", as: "recruit_pokemon"
