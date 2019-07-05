@@ -38,24 +38,15 @@ $border-radius-size: 14px;
   // z-index: 9999;
   border-style: solid;
 
-  .image {
-    border-bottom: 1px solid #021a40;
-    margin-bottom: 10px;
-    img {
-      position: relative;
-      // clip-path: inset(30px 10px 30px);
-      height: 150px;
-      
-      // margin-bottom: 35px;
-      // border-top-left-radius: $border-radius-size;
-      // border-top-right-radius: $border-radius-size;
-      // clip-path: margin-box;
-
-    }
-  }
-
   .name {
     font-size: 26px;
+    color: black;
+    font-weight: 900;
+    margin-bottom: 5px;
+  }
+
+  .id {
+    font-size: 20px;
     color: black;
     font-weight: 900;
     margin-bottom: 5px;

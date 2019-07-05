@@ -1,19 +1,30 @@
-<h1> Name: <%= @user.full_name %> </h1> 
-<h2> ID: <%= @user.username %> </h2> 
 
-<h3> Favorite Type: <%= @user.fav_type %> </h3>
-<h3> Favorite Stat: <%= @user.fav_stat %> </h3>
 
 <div>
-<%= link_to "Catch'em all", pokemons_path %>
-<div>
-<%= link_to 'Edit User',  "/users/#{@user.id}/edit"%>
-</div>
-<div>
-<%= link_to 'Your PokeTeam',  "/users/#{@user.id}/poketeam"%>
-</div>
+
+
+
 
 <div class="box">
     <div class="profile-card">
+        <div class="name">
+            <%= @user.full_name %>
+        </div>
+        <div class="id">
+            @<%= @user.username %>
+        </div>
+        <div class="type">
+            Your Type: <%= @user.fav_type %>
+        </div>
+        <div class="stat">
+            Best Stat:  <%= @user.fav_stat %>
+        </div>
+        <div class="poketeam">
+            <%= link_to 'Your PokeTeam',  "/users/#{@user.id}/poketeam"%>
+        </div>
+
+        <div>
+            <%= link_to 'Edit User',  "/users/#{@user.id}/edit"%>
+        </div>
     </div>
 </div>
