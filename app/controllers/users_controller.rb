@@ -41,11 +41,13 @@ class UsersController < ApplicationController
   def update
       @user = User.find(params[:id])
       @types = Type.all
-      if @user.update(user_params)
-        redirect_to user_path(@user)
-      else
-        render :edit
-      end
+      @user.update(user_params)
+      redirect_to user_path(@user)
+      # if @user.update(user_params_1)
+      #   redirect_to user_path(@user)
+      # else
+      #   render :edit
+      # end
   end
 
   def destroy
@@ -60,6 +62,10 @@ class UsersController < ApplicationController
     private
     def user_params
       params.require(:user).permit(:username, :email, :password, :password_confirmation, :full_name, :fav_type, :fav_stat)
+    end
+
+    def user_params_1
+      params.require(:user).permit(:username, :email, :password, :full_name, :fav_type, :fav_stat)
     end
 
 end
